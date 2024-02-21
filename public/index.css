@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+body {
+    background-image: url('./assets/img/java-programming-language-coding-wallpaper-3554x1999_53.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #0ff;
+    font-family: 'Courier New', monospace;
+}
+#input {
+    background-color: #000;
+    border: 1px solid #0ff;
+    color: #0ff;
+}
+#parseButton {
+    cursor: pointer;
+}
+#output {
+    border: 1px solid #0ff;
+    color: #0ff;
+    padding: 10px;
+}
+.juan{
+    margin: 0;
+    height: 100vh;
+    width: 100%;
+    backdrop-filter: blur(4px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.juan textarea{
+    width: 80%;
+    height: 40%;
+    font-size: 20px;
+    border-top-left-radius: 7px;
+    border-top-right-radius: 7px;
+    padding: 10px;
+    outline: none;
+    resize: none;
+    border: none !important;
+}
+.juan button{
+    right: 0%;
+    top: 0%;
+    margin-top: 20px;
+    margin-right: 10%;
+    position: absolute;
+    color: #fff;
+    background-color: #007BFF;
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    font-size: 20px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    width: 45px;
+    height: 45px;
+    border-radius: 100%;
+}
+.juan button:after{
+    content: ' \27A1';
+}
+.juan button:hover{
+    background-color: #0ff;
+    color: #000;
+}
+.juan pre{
+    font-size: 16px;
+    width: 80%;
+    height: 50%;
+    border-radius: 0px 5px 5px 0px;
+    overflow-y: scroll;
+    background-color: rgba(0, 0, 0, 0.7);
+    border: none !important;
+    border-bottom-left-radius: 7px;
+    border-bottom-right-radius: 7px;
+}

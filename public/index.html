@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Mi aplicación</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="./index.css">
+</head>
+<body>
+    <div class="juan">
+            <textarea id="input" type="text" placeholder="Escriba aquí..."></textarea>
+                <button id="parseButton"></button>
+        <pre id="output"></pre>
+    </div>
+        
+        <script>
+            $('#parseButton').click(function() {
+                const input = $('#input').val();
+                $.ajax({
+                    url: '/parse',
+                    method: 'POST',
+                    contentType: 'application/json',
+                    data: JSON.stringify({ data: input }),
+                    success: function(result) {
+                        $('#output').text(JSON.stringify(result, null, 2));
+                    },
+                    error: function(error) {
+                        $('#output').text(error.responseJSON.error);
+                    }
+                });
+            });
+            </script>
+</body>
+</html>
